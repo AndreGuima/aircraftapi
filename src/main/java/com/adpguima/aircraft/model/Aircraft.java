@@ -3,10 +3,13 @@ package com.adpguima.aircraft.model;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 @Entity(name = "Aircraft")
 public class Aircraft {
@@ -14,12 +17,26 @@ public class Aircraft {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@NotNull
 	private String name;
+	
+	@NotNull
+	@Column(name="serial_number")
 	private String serialNumber;
+	
 	private String un;
+	
+	@NotNull
 	private Integer capacity;
+	
+	@NotNull
+	@Min(0)
 	private BigDecimal weight;
-	private Date ManufactureDate;
+	
+	@NotNull
+	@Column(name="manufacture_date")
+	private Date manufactureDate;
 
 	public Long getId() {
 		return id;
@@ -70,10 +87,10 @@ public class Aircraft {
 	}
 
 	public Date getManufactureDate() {
-		return ManufactureDate;
+		return manufactureDate;
 	}
 
 	public void setManufactureDate(Date manufactureDate) {
-		ManufactureDate = manufactureDate;
+		this.manufactureDate = manufactureDate;
 	}
 }
