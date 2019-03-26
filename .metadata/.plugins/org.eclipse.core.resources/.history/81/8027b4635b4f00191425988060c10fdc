@@ -1,0 +1,3 @@
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.url=jdbc:mysql://localhost:3306/aircraftapi?useSSL=false&useTimezone=true&serverTimezone=UTC
