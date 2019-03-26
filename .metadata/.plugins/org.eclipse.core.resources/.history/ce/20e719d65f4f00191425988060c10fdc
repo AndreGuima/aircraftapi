@@ -1,0 +1,11 @@
+CREATE table aircraft(
+  id bigint auto_increment not null,
+  name decimal(10,2),
+  serial_number varchar(20) not null,
+  un varchar(20),
+  capacity int not null,
+  weight decimal (10,1) not null,
+  manufacture_date DATETIME not null
+
+  primary key (id)
+);
