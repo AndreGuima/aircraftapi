@@ -41,7 +41,7 @@ public class AircraftController {
 	@GetMapping
 	@ResponseStatus(HttpStatus.OK)
 	public List<Aircraft> read() {
-		return this.aircraftService.read();
+		return this.aircraftService.readAll();
 	}
 
 	@DeleteMapping("/{id}")
