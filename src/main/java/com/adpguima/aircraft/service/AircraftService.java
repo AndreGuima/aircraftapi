@@ -22,7 +22,7 @@ public class AircraftService {
 		this.aircraftRepository.save(aircraft);
 	}
 
-	public List<Aircraft> read() {
+	public List<Aircraft> readAll() {
 		return this.aircraftRepository.findAll();
 	}
 
