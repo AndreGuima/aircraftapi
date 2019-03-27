@@ -1,4 +1,4 @@
-package com.adpguima.aircraft.controller;
+package com.zerog.aircraft.controller;
 
 import java.util.List;
 
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.adpguima.aircraft.model.Aircraft;
-import com.adpguima.aircraft.service.AircraftService;
+import com.zerog.aircraft.model.Aircraft;
+import com.zerog.aircraft.service.AircraftService;
 
 @RestController
 @RequestMapping("/aircraft")
