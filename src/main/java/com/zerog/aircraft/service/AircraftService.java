@@ -1,12 +1,12 @@
-package com.adpguima.aircraft.service;
+package com.zerog.aircraft.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.adpguima.aircraft.model.Aircraft;
-import com.adpguima.aircraft.repository.AircraftRepository;
+import com.zerog.aircraft.model.Aircraft;
+import com.zerog.aircraft.repository.AircraftRepository;
 
 @Service
 public class AircraftService {

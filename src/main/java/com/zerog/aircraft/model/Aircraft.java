@@ -1,4 +1,4 @@
-package com.adpguima.aircraft.model;
+package com.zerog.aircraft.model;
 
 import java.math.BigDecimal;
 import java.util.Date;

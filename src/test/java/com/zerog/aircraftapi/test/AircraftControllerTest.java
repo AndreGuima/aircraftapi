@@ -1,4 +1,4 @@
-package com.adpguima.aircraftapi.test;
+package com.zerog.aircraftapi.test;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -16,7 +16,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.web.context.WebApplicationContext;
 
-import com.adpguima.aircraft.AircraftApplication;
+import com.zerog.aircraft.AircraftApplication;
 
 @SpringBootTest(classes = { AircraftApplication.class })
 @RunWith(SpringRunner.class)
