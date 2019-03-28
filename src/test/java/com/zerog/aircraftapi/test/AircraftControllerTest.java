@@ -39,4 +39,23 @@ public class AircraftControllerTest {
 				.andExpect(MockMvcResultMatchers.jsonPath("$.[0].name").isNotEmpty());
 	}
 
+	@Test
+	public void postAircraftTest() throws Exception {
+		String todayAsString = TestUtil.getTodayAsString();
+
+		mockMvc.perform(MockMvcRequestBuilders.post("/aircraft").accept(MediaType.APPLICATION_JSON)
+				.param("name", "New Aircraft Name").param("serialNumber", "100").param("capacity", "20")
+				.param("manufactureDate", todayAsString).param("weight", "900")).andDo(print())
+				.andExpect(status().isCreated());
+	}
+
+	@Test
+	public void postAircraftShouldReturnBadRequestTest() throws Exception {
+		String todayAsString = TestUtil.getTodayAsString();
+
+		mockMvc.perform(MockMvcRequestBuilders.post("/aircraft").accept(MediaType.APPLICATION_JSON)
+				.param("name", "New Aircraft Name").param("manufactureDate", todayAsString)).andDo(print())
+				.andExpect(status().isBadRequest());
+	}
+
 }
