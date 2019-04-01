@@ -17,26 +17,39 @@ public class Aircraft {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@NotNull
 	private String name;
-	
+
 	@NotNull
-	@Column(name="serial_number")
+	@Column(name = "serial_number")
 	private String serialNumber;
-	
+
 	private String un;
-	
+
 	@NotNull
 	private Integer capacity;
-	
+
 	@NotNull
 	@Min(0)
 	private BigDecimal weight;
-	
+
 	@NotNull
-	@Column(name="manufacture_date")
+	@Column(name = "manufacture_date")
 	private Date manufactureDate;
+	
+	public Aircraft() {
+		super();
+	}
+
+	public Aircraft(String name, String serialNumber, String un, int capacity, BigDecimal weight, Date manufactureDate) {
+		this.name = name;
+		this.serialNumber = serialNumber;
+		this.un = un;
+		this.capacity = capacity;
+		this.weight = weight;
+		this.manufactureDate = manufactureDate;
+	}
 
 	public Long getId() {
 		return id;
