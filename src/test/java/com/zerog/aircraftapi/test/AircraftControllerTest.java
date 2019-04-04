@@ -115,4 +115,16 @@ public class AircraftControllerTest {
 				.andExpect(status().isNotFound());
 
 	}
+
+	// delete ok
+	@Test
+	public void deleteAircraftOk() throws Exception {
+		mockMvc.perform(MockMvcRequestBuilders.delete("/aircrafts/" + 1)).andExpect(status().isNoContent());
+	}
+	
+	// delete invalid id
+	@Test
+	public void deleteAircraftShouldReturnNotFoundTest() throws Exception {
+		mockMvc.perform(MockMvcRequestBuilders.delete("/aircrafts/-1")).andExpect(status().isNotFound());
+	}
 }
