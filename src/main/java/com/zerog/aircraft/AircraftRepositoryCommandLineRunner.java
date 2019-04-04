@@ -18,13 +18,16 @@ public class AircraftRepositoryCommandLineRunner implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Aircraft aircraft = new Aircraft("Bolicraft", "400", "Defesa", 20, new BigDecimal(90.2), new Date());
+		Aircraft aircraft = new Aircraft("Amor", "400", "Defesa", 20, new BigDecimal(90.2), new Date());
 		aircraftService.create(aircraft);
 
-		aircraft = new Aircraft("Zerocraft", "20", "Ataque", 30, new BigDecimal(90.4), new Date());
+		aircraft = new Aircraft("Love", "20", "Ataque", 30, new BigDecimal(90.4), new Date());
 		aircraftService.create(aircraft);
 
-		aircraft = new Aircraft("Zero G", "40", "Meio Campo", 40, new BigDecimal(90.5), new Date());
+		aircraft = new Aircraft("Dealwithit", "40", "Meio Campo", 40, new BigDecimal(90.5), new Date());
+		aircraftService.create(aircraft);
+		
+		aircraft = new Aircraft("Horse", "40", "Meio Campo", 40, new BigDecimal(90.5), new Date());
 		aircraftService.create(aircraft);
 	}
 

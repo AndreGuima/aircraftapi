@@ -50,7 +50,12 @@ public class AircraftService {
 	}
 
 	public void delete(Long id) {
-		this.aircraftRepository.deleteById(id);
+		Aircraft aircraft = this.findById(id);
+		if (aircraft != null && !aircraft.getName().isEmpty()) {
+			this.aircraftRepository.deleteById(id);
+		} else {
+			throw new AircraftNotFoundException("Aircraft not found " + id);
+		}
 	}
 
 }
